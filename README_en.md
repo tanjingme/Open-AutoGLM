@@ -630,8 +630,32 @@ pip install -e .
 #### Phase 3: Configure Model Service
 
 **If user chooses Option A (using already-deployed model):**
-- Use the URL provided by the user directly
-- Skip local model deployment steps
+
+You can use the following third-party model services:
+
+1. **Novita AI**
+   - Documentation: https://novita.ai/models/model-detail/zai-org-autoglm-phone-9b-multilingual
+   - `--base-url`: `https://api.novita.ai/openai`
+   - `--model`: `zai-org/autoglm-phone-9b-multilingual`
+   - `--apikey`: Apply for your own API key on the Novita AI platform
+
+2. **Parasail**
+   - Documentation: https://www.saas.parasail.io/serverless?name=auto-glm-9b-multilingual
+   - `--base-url`: `https://api.parasail.io/v1`
+   - `--model`: `parasail-auto-glm-9b-multilingual`
+   - `--apikey`: Apply for your own API key on the Parasail platform
+
+Example usage:
+
+```bash
+# Using Novita AI
+python main.py --base-url https://api.novita.ai/openai --model "zai-org/autoglm-phone-9b-multilingual" --apikey "your-novita-api-key" "Open Chrome browser"
+
+# Using Parasail
+python main.py --base-url https://api.parasail.io/v1 --model "parasail-auto-glm-9b-multilingual" --apikey "your-parasail-api-key" "Open Chrome browser"
+```
+
+Or use the URL provided by the user directly and skip local model deployment steps.
 
 **If user chooses Option B (deploy model locally):**
 
