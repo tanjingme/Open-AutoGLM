@@ -5,7 +5,7 @@
 ### 坐标转换说明
 大多数涉及屏幕交互的操作（Tap, Swipe等）都涉及坐标转换。模型输出的是归一化相对坐标（通常为 0-1000），而 ADB 需要屏幕绝对像素坐标。
 `ActionHandler._convert_relative_to_absolute` 方法负责此转换：
-$$ X_{abs} = \lfloor \frac{X_{rel}}{1000} \times Width \rfloor, \quad Y_{abs} = \lfloor \frac{Y_{rel}}{1000} \times Height \rfloor $$
+$ X_{abs} = \lfloor \frac{X_{rel}}{1000} \times Width \rfloor, \quad Y_{abs} = \lfloor \frac{Y_{rel}}{1000} \times Height \rfloor $
 ## 2. 操作指令全集 (Comprehensive Action List)
 以下是 `handler.py` 中定义的所有 14 种操作指令及其详细实现逻辑。
 ### 2.1 基础交互操作 (Basic Interactions)
