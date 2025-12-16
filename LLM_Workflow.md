@@ -131,3 +131,7 @@ def _handle_tap(self, action, width, height):
 5.  **Syscall**: 封装为 `adb shell input` 命令发送至 Android 系统内核。
 
 这一过程不仅依赖模型强大的多模态理解能力（理解界面布局）和指令遵循能力（输出正确格式），也依赖框架端精确的坐标换算和鲁棒的 ADB 封装。
+
+## 说明
+上述文档是由google antigravity使用Gemini3 pro(High) Planning模式通过如下prompt生成的。
+Prompt:请你阅读Readme.md然后选择性的分析本目录下的源码文件，搞清楚AutoGLM-Phone-9B 是如何与Open-AutoGLM框架进行交互的，我是一位大模型算法工程师，知道LLM和VLM的推理过程，现在想着知道大模型的推理结果tokens 是如何变成手机上的操作的。请把解释过程写入markdown文件当中。
