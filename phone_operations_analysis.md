@@ -109,3 +109,10 @@ $$ X_{abs} = \lfloor \frac{X_{rel}}{1000} \times Width \rfloor, \quad Y_{abs} = 
 3.  **Dispatch**: 使用 `action_name` 查找上述 14 个 Handler 之一。
 4.  **Try-Catch**: 统一捕获所有底层 ADB 异常，保证 Agent 不会因为单一指令失败而崩溃。
 这份文档涵盖了源码中目前存在的所有分支逻辑，确保没有任何操作遗漏。
+
+
+
+## 说明
+上述文档是由google antigravity使用Gemini3 pro(High) Planning模式通过如下prompt生成的。
+Prompt:再次生成一个markdown 文件用于解释phone_agent/actions
+/handler.py 中手机操作，要求不能够有遗漏！
